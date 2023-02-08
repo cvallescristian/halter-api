@@ -24,11 +24,15 @@ services:
     <<: *backend
     ports:
       - 3000:3000/tcp
+    stdin_open: true
+    tty: true
     depends_on:
       - db
 
   db:
     image: postgres:11.2
+    ports:
+      - "127.0.0.1:5432:5432"
     environment:
       POSTGRES_USER: rails
       POSTGRES_PASSWORD: root

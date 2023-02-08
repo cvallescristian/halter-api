@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  collar_id: MyString
+  cow_number: 1
+  collar_status: MyString
+  last_known_location: MyString
+
+two:
+  collar_id: MyString
+  cow_number: 1
+  collar_status: MyString
+  last_known_location: MyString

@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+# Create default cows
+if Cow.all.count < 50 
+  50.times {|i| Cow.create(
+    collarId: i.to_s,
+    cowNumber: "#{i}#{i}-#{i}#{i}"
+  )}
+end
