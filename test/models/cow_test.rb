@@ -18,6 +18,5 @@ class CowTest < ActiveSupport::TestCase
     @cow1 = cows(:one)
     assert Cow.new(collarId: "another-collar-id", cowNumber: "another-cow-number").save 
   end
-
   
 end
