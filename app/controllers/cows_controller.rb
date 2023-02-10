@@ -1,7 +1,7 @@
 class CowsController < ApplicationController
   def index 
-    @cows = Cow.all
-
+    @cows = Cow.all.map { |cow| cow.full_data}
+    
     render json: @cows
   end
 
@@ -10,7 +10,7 @@ class CowsController < ApplicationController
 
     if @cow.valid?
       @cow.save
-      render json: @cow, status: :created 
+      render json: @cow.full_data, status: :created 
     else
       render json: @cow.errors, status: :unprocessable_entity 
     end
@@ -24,7 +24,7 @@ class CowsController < ApplicationController
     end
 
     if @cow.update(cows_params)
-      render json: @cow, status: :ok
+      render json: @cow.full_data, status: :ok
     else
       render json: @cow.errors, status: :unprocessable_entity 
     end
