@@ -12,7 +12,7 @@ You will need to have Docker and `docker-compose` available in your system.
 1. To run this project you have to execute the build and compose command
 
 ```bash
-  $ docker-compose up --build
+  docker-compose up --build
 ```
 
 This command run the 3 services that exist `backend` (The ruby application), `bd` (Postgres) and `redis`.
@@ -25,7 +25,7 @@ After that check is running, go to your browser and visit: http://localhost:3000
 
 For the other times to run you can just run: 
 ```bash
-  $ docker-compose up
+  docker-compose up
 ```
 
 &nbsp;
@@ -61,16 +61,16 @@ For testing you need to enter to the bash container and run the test command.
 1. Check the docker ID for backend image: 
 
 ```bash
-  $ docker ps
+  docker ps
 ```
 
 ![plot](./readme_images/2.png)
 
 2. Get the <strong>container ID</strong> of `halter-api-backend` and then run the command: 
 ```
-  $ docker exec -ti CONTAINER-ID bash
+  docker exec -ti CONTAINER-ID bash
 ```
 3. Inside the container bash, you can run:
 ```
-  $ rails test
+  rails test
 ``` 
