@@ -34,7 +34,7 @@ For the other times to run you can just run:
 
 This project contain a collection to import in postman [ Halter Collection](./Halti%20Test.postman_collection.json). 
 
-1. Create a Cow: [GET] http://localhost:3000/cows/#{cow.id} 
+1. Create a Cow: [POST] http://localhost:3000/cows 
  > The body must contain into the form data:
  >  <br>
  >  `cow[collarId]="some-id"`
